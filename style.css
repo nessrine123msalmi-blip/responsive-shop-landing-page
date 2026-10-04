@@ -1,0 +1,286 @@
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* ==================== HEADER ==================== */
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+
+/* ==================== HERO ==================== */
+
+.hero {
+    min-height: 70vh;
+
+    background-image: url("https://images.unsplash.com/photo-1441986300917-64674bd600d8");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: #f0a500;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #d89000;
+}
+
+
+/* ==================== PRODUCTS ==================== */
+
+.products-section {
+    padding: 70px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.product-card {
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-content h3 {
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buy-button {
+    display: inline-block;
+
+    background-color: #222;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.buy-button:hover {
+    background-color: #f0a500;
+}
+
+
+/* ==================== CONTACT ==================== */
+
+.contact-section {
+    background-color: #f5f5f5;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 20px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #f0a500;
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablettes */
+@media (max-width: 900px) {
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Téléphones */
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero-content {
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section {
+        padding: 50px 20px;
+    }
+
+}
